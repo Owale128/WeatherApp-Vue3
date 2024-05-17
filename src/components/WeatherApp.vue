@@ -24,9 +24,25 @@ onMounted(() => {
 </script>
 
 <template>
-
+  <div :class="'container'">
+    <h1>Weather App</h1>
+    <form @submit.prevent="fetchWeather">
+      <input type="text" v-model="city" placeholder="Ange stad" />
+      <button>Visa väder</button>
+    </form>
+    <hr>
+    <div :class="'weatherContainer'">
+      <div v-if="weather" :class="'weather'">
+        <h2>{{ weather.name }}</h2>
+        <p>{{ weather.main.temp }}°C</p>
+        <p>{{ weather.weather[0].description }}</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+@import "src/sass/main.scss";
+
 
 </style>
