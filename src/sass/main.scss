@@ -30,6 +30,7 @@ body {
     }
     
     form {
+        
         padding: 2rem;
         border-radius: 1rem;
         margin-bottom: 1rem;
@@ -94,4 +95,24 @@ body {
     
   }
 
+  @media screen and (max-width: 47.94rem) {
+      
+      .container {
+        
+        form {
+            margin-right: 0.8rem ;
+            input {
+                font-size: 1.4rem;
+                padding: 0.3rem;
+            }
+            button {
+                font-size: 1.5rem;
+            }
+        }
+        .weatherContainer {
+            width: 22rem;
+            margin-right: 0.8rem;
+        }
+    }
+   }
   
