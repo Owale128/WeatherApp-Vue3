@@ -4,4 +4,4 @@ This weather app is built with Vue 3 and TypeScript. It retrieves weather data f
 
 You can visit the page at: https://checktheweathertoday.netlify.app/
 
-![WeatherApp Pic](https://github.com/Owale128/WeatherApp-Vue3/assets/110387474/d92ab684-8b8e-4f8a-a481-2511843b03db)
+![WakaPic](https://github.com/Owale128/WeatherApp-Vue3/assets/110387474/e7a22afe-bcc9-44e8-af61-a21a7ffc6f2f)
