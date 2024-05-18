@@ -2,15 +2,17 @@
 import { ref, onMounted } from 'vue';
 import { getWeather } from '../services/apiCall'
 import { WeatherData } from '../models/WeatherModel.ts';
+import WeatherForm from './WeatherForm.vue';
+import WeatherDisplay from './WeatherDisplay.vue';
 
-const city = ref('');
+
 const weather = ref<WeatherData | null>(null);
 const apiKey = import.meta.env.VITE_APP_API_KEY;
 
-const fetchWeather = async () => {
+const fetchWeather = async (city: string) => {
   try {
-    if (city.value) {
-      weather.value = await getWeather(city.value, apiKey);
+    if (city.trim()) {
+      weather.value = await getWeather(city, apiKey);
       console.log(weather.value);
     }
   } catch (error) {
@@ -19,25 +21,17 @@ const fetchWeather = async () => {
 };
 
 onMounted(() => {
-  fetchWeather();
+  const defaultCity = 'Stockholm'; 
+  fetchWeather(defaultCity);
 });
 </script>
 
 <template>
   <div :class="'container'">
     <h1>Weather App</h1>
-    <form @submit.prevent="fetchWeather">
-      <input type="text" v-model="city" placeholder="Ange stad" />
-      <button>Visa väder</button>
-    </form>
+    <WeatherForm @fetch-weather="fetchWeather" />
     <hr>
-    <div :class="'weatherContainer'">
-      <div v-if="weather" :class="'weather'">
-        <h2>{{ weather.name }}</h2>
-        <p>{{ weather.main.temp }}°C</p>
-        <p>{{ weather.weather[0].description }}</p>
-      </div>
-    </div>
+    <WeatherDisplay :weather="weather"/>
   </div>
 </template>
 
