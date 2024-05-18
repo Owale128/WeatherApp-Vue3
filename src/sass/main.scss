@@ -57,7 +57,7 @@ body {
           
           
 
-        &:hover {
+       &:hover {
             background-color: rgb(8, 158, 8);
             color: black;
             color: white;
@@ -110,12 +110,16 @@ body {
             button {
                 font-size: 1.5rem;
 
-                &:active {
-                    background-color: rgb(8, 158, 8);
+             &:hover {
+                background-color: black;
+                }
+
+             &:active {
+                background-color: rgb(8, 158, 8);
                 }
             }
         }
-        
+
         .weatherContainer {
             width: 22rem;
             margin-right: 0.8rem;
@@ -124,6 +128,6 @@ body {
                 margin-top: 2rem;
             }
         }
-    }
+     }
    }
   

@@ -100,6 +100,9 @@ body {
   .container form button {
     font-size: 1.5rem;
   }
+  .container form button:hover {
+    background-color: black;
+  }
   .container form button:active {
     background-color: rgb(8, 158, 8);
   }
