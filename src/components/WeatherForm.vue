@@ -7,6 +7,7 @@ const emit = defineEmits(['fetchWeather']);
 const onSubmit = () => {
     if(city.value.trim() !== '') {
         emit('fetchWeather', city.value)
+        city.value = '';
     }
 }
 </script>
