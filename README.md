@@ -7,4 +7,4 @@ You can visit the page at: https://checktheweathertoday.netlify.app/
 ![WakaPic](https://github.com/Owale128/WeatherApp-Vue3/assets/110387474/e7a22afe-bcc9-44e8-af61-a21a7ffc6f2f)
 
 # Stack:
-[![My Skills](https://skillicons.dev/icons?i=vite,vue,scss)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=vite,vue,scss,netlify)](https://skillicons.dev)
